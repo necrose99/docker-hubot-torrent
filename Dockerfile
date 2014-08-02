@@ -2,11 +2,6 @@ FROM node
 MAINTAINER Dmitriy Nesteryuk "nesterukd@gmail.com"
 
 RUN bash -c '\
-  apt-get update -qq ;\
-  \
-  echo "# Installing Redis" ;\
-  apt-get -q -y install redis-server ;\
-  \
   echo "# Installing Hubot" ;\
   npm install -g hubot coffee-script ;\
   mkdir /hubot && cd /hubot ;\
@@ -21,11 +16,13 @@ RUN bash -c '\
 '
 # END RUN
 
-ADD src/redis.sh /etc/service/redis/run
+# ADD src/redis.sh /etc/service/redis/run
 ADD src/external-scripts.json /hubot/external-scripts.json
 ADD src/package.json /hubot/package.json
 
 VOLUME ["/hubot"]
 
-#CMD ["-a gtalk-gluck"]
-#ENTRYPOINT ["/hubot/bin/hubot"]
+WORKDIR /hubot
+
+ENTRYPOINT "bin/hubot"
+CMD "-a gtalk-gluck"
