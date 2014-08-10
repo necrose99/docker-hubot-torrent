@@ -1,7 +1,17 @@
-docker-hubot-torrent
-====================
+# Docker-hubot-torrent
 
-```shell
-sudo docker run --name redis-app -v /yourdirectory/data:/data -d redis
-sudo docker run --name hubot-torrent -e REDIS_URL="redis://172.17.0.2:6379" -e HUBOT_GTALK_USERNAME="your@gmail.com" -e HUBOT_GTALK_PASSWORD="password" --link redis-app:redis -d dnesteryuk/docker-hubot-torrent
+It is an image which contains [Hubot](/github/hubot) with already integrated [Hubot Torrent plugin](/dnesteryuk/hubot-torrent) which allow you to download files from torrents [Transmission](http://www.transmissionbt.com/) which is managed through Hubot.
+
+# Installation
+
+1. Pull latest version of the image
+
+```
+  docker pull dnesteryuk/docker-hubot-torrent
+```
+
+2. Launch the hubot-torrent container
+
+```
+  docker
 ```
