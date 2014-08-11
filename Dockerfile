@@ -2,6 +2,7 @@ From ubuntu:trusty
 MAINTAINER Dmitriy Nesteryuk "nesterukd@gmail.com"
 
 ENV DEBIAN_FRONTEND noninteractive
+ENV HUBOT_DOWNLOAD_DIR /hubot_data
 
 RUN apt-get update
 
@@ -29,6 +30,6 @@ RUN chmod a+x /hubot/run.sh
 
 RUN cd /hubot && npm install
 
-VOLUME ["/hubot"]
+VOLUME /hubot_data
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf"]
