@@ -1,0 +1,8 @@
+HUBOT_GTALK_USERNAME=yourlogin
+HUBOT_GTALK_PASSWORD=yourpassword
+
+PSLAN_USERNAME=yourlogin
+PSLAN_PASSWORD=yourpassword
+
+RUTRACKER_LOGIN=yourlogin
+RUTRACKER_PASSWORD=yourpassword
