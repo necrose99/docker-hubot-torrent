@@ -1,5 +1,5 @@
 # MAINTAINER Dmitriy Nesteryuk "nesterukd@gmail.com" 
-
+# to do /dev-haskell/cabal-install https://github.com/neurogeek/g-npm
 # ENV DEBIAN_FRONTEND noninteractive rather use Sabayon/Gentoo  https://github.com/wking/dockerfile/
 ENV HUBOT_DOWNLOAD_DIR /hubot_data
 FROM sabayon/gentoo-stage3-base-amd64
