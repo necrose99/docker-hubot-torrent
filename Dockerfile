@@ -1,4 +1,4 @@
-From ubuntu:trusty
+FROM sabayon/gentoo-stage3-base-amd64
 MAINTAINER Dmitriy Nesteryuk "nesterukd@gmail.com"
 
 ENV DEBIAN_FRONTEND noninteractive
